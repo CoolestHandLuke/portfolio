@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input:focus {
+    outline-style: none;
+    border-bottom-color: #4ee1a0;
+}
+
+.textarea:focus {
+    outline-style: none;
+    border-bottom-color: #4ee1a0;
+}

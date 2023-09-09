@@ -1,4 +1,3 @@
-import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -7,16 +6,15 @@ import Contact from './components/Contact';
 
 function App() {
     return (
-        <>
+        <div className="flex justify-center">
             <main className="container">
-                Welcome to my portfolio!
                 <Navbar />
                 <Hero />
                 <Skills />
                 <Projects />
                 <Contact />
             </main>
-        </>
+        </div>
     );
 }
 
