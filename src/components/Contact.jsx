@@ -50,7 +50,9 @@ const Contact = () => {
     return (
         <div className="container flex py-8 gap-8">
             <div className="flex-1">
-                <h1 className="text-5xl text-white">Contact</h1>
+                <h1 className="mb-10 text-5xl text-white underline decoration-neon-green">
+                    Contact
+                </h1>
                 <p>
                     I would love to hear about your project and how I could
                     help. Please fill in the form, and I will get back to you as

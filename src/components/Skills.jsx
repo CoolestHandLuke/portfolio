@@ -3,7 +3,9 @@ import { skills } from '../data';
 const Skills = () => {
     return (
         <>
-            <h1 className="my-10 text-5xl text-bold text-white">Skills</h1>
+            <h1 className="my-10 text-5xl text-bold text-white underline decoration-neon-green">
+                Skills
+            </h1>
 
             <div className="grid gap-4 grid-cols-2 my-10 md:grid-cols-4 lg:grid-cols-6 border-b-2">
                 {skills.map(({ id, name, yearsExperience }) => {

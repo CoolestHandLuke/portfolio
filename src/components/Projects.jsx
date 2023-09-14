@@ -5,7 +5,9 @@ import { BiLogoTailwindCss, BiLogoJavascript } from 'react-icons/bi';
 const Projects = () => {
     return (
         <div className="container border-b-2">
-            <h1 className="mb-10 text-5xl text-bold text-white">Projects</h1>
+            <h1 className="mb-10 text-5xl text-bold text-white underline decoration-neon-green">
+                Projects
+            </h1>
             <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
                 {projects.map(
                     ({ id, name, description, projectImg, tags, url }) => {
@@ -30,7 +32,7 @@ const Projects = () => {
                                             return (
                                                 <div
                                                     key={index}
-                                                    className={`badge badge-${tag}`}
+                                                    className={`badge badge-${tag} tracking-wide`}
                                                 >
                                                     {tag === 'React' && (
                                                         <FaReact />
