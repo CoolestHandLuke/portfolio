@@ -4,32 +4,35 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const Contact = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [payload, setPayload] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
 
     const onSubmit = async (e) => {
         e.preventDefault();
         // Check for a valid message
 
-        if (name.length < 2) {
+        if (payload.name.length < 2) {
             toast.warn('Please enter your name');
             return;
-        } else if (email.length < 2) {
+        } else if (payload.email.length < 2) {
             toast.warn('Please enter your email address');
             return;
-        } else if (message.length < 10) {
+        } else if (payload.message.length < 10) {
             toast.warn('Please enter a longer message');
             return;
         }
-        const newMessage = {
-            name,
-            email,
-            message,
-            timestamp: serverTimestamp(),
-        };
+
         try {
-            const docRef = await addDoc(collection(db, 'messages'), newMessage);
+            const body = `${payload.name} just sent you a new message:\n${payload.message}`;
+            const newMessage = {
+                to: import.meta.env.VITE_REACT_APP_TO_NUMBER,
+                body,
+                payload,
+            };
+            await addDoc(collection(db, 'messages'), newMessage);
             e.target.reset();
             toast.success('Message sent! Thank you for your interest :)');
         } catch (error) {
@@ -39,13 +42,12 @@ const Contact = () => {
     };
 
     const onChange = (e) => {
-        if (e.target.id === 'name') {
-            setName(e.target.value);
-        } else if (e.target.id === 'email') {
-            setEmail(e.target.value);
-        } else {
-            setMessage(e.target.value);
-        }
+        setPayload((prevState) => {
+            return {
+                ...prevState,
+                [e.target.id]: e.target.value,
+            };
+        });
     };
     return (
         <div className="container flex py-8 gap-8">
