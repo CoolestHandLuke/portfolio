@@ -22,9 +22,6 @@ const Hero = () => {
                         I'm currently a CS student at Oregon State University
                         learning how to build React apps on the side.
                     </p>
-                    <button className="border-b-4 border-neon-green tracking-wider uppercase hover:text-neon-green">
-                        <div className="py-2">Contact me</div>
-                    </button>
                 </div>
             </div>
         </div>

@@ -1,3 +1,8 @@
+import adviceGeneratorImg from './assets/project-thumbnails/advice-generator.jpg';
+import feedbackAppImg from './assets/project-thumbnails/feedback-app.jpg';
+import githubFinderImg from './assets/project-thumbnails/github-finder.jpg';
+import ratingComponentImg from './assets/project-thumbnails/rating-component.jpg';
+
 export const skills = [
     {
         id: 0,
@@ -39,50 +44,35 @@ export const skills = [
 export const projects = [
     {
         id: 0,
-        name: 'Project 1',
-        projectImg:
-            'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2689&q=80',
-        tags: ['HTML', 'CSS', 'JS'],
-        url: 'https://github.com/CoolestHandLuke',
+        name: 'Github Finder',
+        description:
+            'A React app to search GitHub profiles and see repo details.',
+        projectImg: githubFinderImg,
+        tags: ['React', 'Tailwind', 'API'],
+        url: 'https://transcendent-jalebi-209f54.netlify.app/',
     },
     {
         id: 1,
-        name: 'Project 2',
-        projectImg:
-            'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2689&q=80',
-        tags: ['HTML', 'CSS', 'JS'],
-        url: 'https://github.com/CoolestHandLuke',
+        name: 'Feedback App',
+        description: 'A feedback/rating UI built using React.',
+        projectImg: feedbackAppImg,
+        tags: ['React'],
+        url: 'https://lustrous-kitsune-f7c032.netlify.app/',
     },
     {
         id: 2,
-        name: 'Project 3',
-        projectImg:
-            'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2689&q=80',
-        tags: ['HTML', 'CSS', 'JS'],
-        url: 'https://github.com/CoolestHandLuke',
+        name: 'Advice Generator',
+        description: 'An interface for making requests to the Advice Slip API.',
+        projectImg: adviceGeneratorImg,
+        tags: ['React', 'API'],
+        url: 'https://legendary-nougat-28dee2.netlify.app/',
     },
     {
         id: 3,
-        name: 'Project 4',
-        projectImg:
-            'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2689&q=80',
+        name: 'Rating Component',
+        description: 'My first project. A simple 1-5 rating component.',
+        projectImg: ratingComponentImg,
         tags: ['HTML', 'CSS', 'JS'],
-        url: 'https://github.com/CoolestHandLuke',
-    },
-    {
-        id: 4,
-        name: 'Project 5',
-        projectImg:
-            'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2689&q=80',
-        tags: ['HTML', 'CSS', 'JS'],
-        url: 'https://github.com/CoolestHandLuke',
-    },
-    {
-        id: 5,
-        name: 'Project 6',
-        projectImg:
-            'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2689&q=80',
-        tags: ['HTML', 'CSS', 'JS'],
-        url: 'https://github.com/CoolestHandLuke',
+        url: 'https://cool-frangollo-7f93a2.netlify.app/',
     },
 ];

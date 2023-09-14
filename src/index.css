@@ -3,12 +3,40 @@
 @tailwind components;
 @tailwind utilities;
 
-.input:focus {
+.input:focus,
+.input:hover {
     outline-style: none;
     border-bottom-color: #4ee1a0;
 }
 
-.textarea:focus {
+.textarea:focus,
+.textarea:hover {
     outline-style: none;
     border-bottom-color: #4ee1a0;
+}
+
+.badge-React {
+    background-color: #61dbfb;
+    color: white;
+}
+.badge-Tailwind {
+    background-color: #3490dc;
+    color: white;
+}
+.badge-API {
+    background-color: #4ee1a0;
+    color: white;
+}
+
+.badge-HTML {
+    background-color: #e44d26;
+    color: white;
+}
+.badge-CSS {
+    background-color: #264de4;
+    color: white;
+}
+.badge-JS {
+    background-color: #f7df1e;
+    color: black;
 }
