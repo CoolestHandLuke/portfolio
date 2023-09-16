@@ -7,37 +7,30 @@ export const skills = [
     {
         id: 0,
         name: 'HTML',
-        yearsExperience: 1,
     },
     {
         id: 1,
         name: 'CSS',
-        yearsExperience: 1,
     },
     {
         id: 2,
         name: 'JS',
-        yearsExperience: 1,
     },
     {
         id: 3,
         name: 'React',
-        yearsExperience: 1,
     },
     {
         id: 4,
         name: 'Tailwind',
-        yearsExperience: 1,
     },
     {
         id: 5,
         name: 'Linux',
-        yearsExperience: 1,
     },
     {
         id: 6,
         name: 'Python',
-        yearsExperience: 1,
     },
 ];
 

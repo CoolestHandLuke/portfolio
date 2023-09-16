@@ -9,7 +9,7 @@ import { ToastContainer } from 'react-toastify';
 function App() {
     return (
         <div className="flex justify-center">
-            <main className="container">
+            <main className="container px-4">
                 <Navbar />
                 <Hero />
                 <Skills />

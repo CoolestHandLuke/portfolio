@@ -4,17 +4,17 @@ import { BiLogoTailwindCss, BiLogoJavascript } from 'react-icons/bi';
 
 const Projects = () => {
     return (
-        <div className="container border-b-2">
+        <div className="container border-b-2 pb-8">
             <h1 className="mb-10 text-5xl text-bold text-white underline decoration-neon-green">
                 Projects
             </h1>
-            <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+            <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
                 {projects.map(
                     ({ id, name, description, projectImg, tags, url }) => {
                         return (
                             <div
                                 key={id}
-                                className="card w-96 bg-base-100 shadow-xl justify-self-center"
+                                className="card w-96 bg-base-100 shadow-sm shadow-white hover:shadow-neon-green justify-self-center"
                             >
                                 <figure>
                                     <a href={url}>
@@ -25,7 +25,9 @@ const Projects = () => {
                                     </a>
                                 </figure>
                                 <div className="card-body">
-                                    <h2 className="card-title">{name}</h2>
+                                    <h2 className="card-title text-white">
+                                        {name}
+                                    </h2>
                                     <p>{description}</p>
                                     <div className="card-actions justify-end">
                                         {tags.map((tag, index) => {

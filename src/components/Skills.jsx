@@ -1,6 +1,8 @@
 import { skills } from '../data';
-import { FaReact, FaCogs, FaHtml5, FaCss3Alt } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { BiLogoTailwindCss, BiLogoJavascript } from 'react-icons/bi';
+import { FcLinux } from 'react-icons/fc';
+import pythonLogo from '../assets/python-logo.svg';
 
 const Skills = () => {
     return (
@@ -10,36 +12,57 @@ const Skills = () => {
             </h1>
 
             <div className="grid gap-4 grid-cols-2 my-10 md:grid-cols-4 lg:grid-cols-6 border-b-2">
-                {skills.map(({ id, name, yearsExperience }) => {
+                {skills.map(({ id, name }) => {
                     return (
                         <div key={id} className="my-10">
-                            <h1 className="text-3xl text-white">
+                            <h1 className="flex space-around text-3xl text-white relative">
                                 {name === 'React' && (
-                                    <FaReact className="react-skill" />
+                                    <span style={{ color: '#61dbfb' }}>
+                                        <FaReact />
+                                    </span>
                                 )}
                                 {name === 'Tailwind' && (
-                                    <BiLogoTailwindCss className="tailwind-skill" />
+                                    <span style={{ color: '#3490dc' }}>
+                                        <BiLogoTailwindCss />
+                                    </span>
                                 )}
-                                {name === 'API' && (
-                                    <FaCogs className="API-skill" />
-                                )}
+
                                 {name === 'HTML' && (
-                                    <FaHtml5 className="HTML-skill" />
+                                    <span style={{ color: '#e44d26' }}>
+                                        <FaHtml5 />
+                                    </span>
                                 )}
                                 {name === 'CSS' && (
-                                    <FaCss3Alt classname="CSS-skill" />
+                                    // Some CSS shenanigans
+                                    <span
+                                        className="css-is-fun"
+                                        style={{
+                                            color: '#264de4',
+                                        }}
+                                    >
+                                        <FaCss3Alt />
+                                    </span>
                                 )}
                                 {name === 'JS' && (
-                                    <BiLogoJavascript classname="JS-skill" />
+                                    <span
+                                        style={{
+                                            color: '#f7df1e',
+                                        }}
+                                    >
+                                        <BiLogoJavascript />
+                                    </span>
                                 )}
+                                {name === 'Linux' && <FcLinux />}
+                                {name === 'Python' && (
+                                    <img
+                                        src={pythonLogo}
+                                        height={'22.5px'}
+                                        width={'22.5px'}
+                                    />
+                                )}
+
                                 {name}
                             </h1>
-                            <p className="color-grey">
-                                {yearsExperience}{' '}
-                                {yearsExperience > 1
-                                    ? 'years experience'
-                                    : 'year of experience'}
-                            </p>
                         </div>
                     );
                 })}

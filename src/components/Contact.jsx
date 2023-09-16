@@ -50,7 +50,7 @@ const Contact = () => {
         });
     };
     return (
-        <div className="container flex py-8 gap-8">
+        <div className="container flex flex-col py-8 gap-8">
             <div className="flex-1">
                 <h1 className="mb-10 text-5xl text-white underline decoration-neon-green">
                     Contact
